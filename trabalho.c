@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <trabalho.h>
 
-
 int main()
 {
   //Declarcão,abertura e verificação de ponteiros para listas
   FILE * lista1;
   FILE * lista2;
-  lista1 = fopen("lista1.txt","rb");hah
+  lista1 = fopen("lista1.txt","rb");
   if(lista1 == NULL)
   {
     printf("Falha!!");
@@ -33,9 +32,6 @@ int main()
   //teste para índice secundário
   printf("///////TESTE/////\n");
   criarinds();
-
-
-
 
 
 
