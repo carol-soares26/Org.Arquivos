@@ -2,36 +2,31 @@
 #include <stdlib.h>
 #include <trabalho.h>
 
+
 int main()
 {
-  //Declarcão,abertura e verificação de ponteiros para listas
-  FILE * lista1;
-  FILE * lista2;
-  lista1 = fopen("lista1.txt","rb");
-  if(lista1 == NULL)
-  {
-    printf("Falha!!");
-    exit(1);
-  }
+    int opcao;
+    FILE * lista1;
+    FILE * lista2;
+    Aponta * l1 = CriarAponta();
+    Aponta * l2 = CriarAponta();
 
-  lista2 = fopen("lista2.txt","rb");
-  if(lista2 == NULL)
-  {
-    printf("Falha!!");
-    exit(1);
-  }
+    char filename[20];
 
-  char filename[20];//string para nomear indices primários
 
-  //nomeaçao dos arquivos txt e criacão dos índices primarios
-  sprintf(filename,"indicelista1.txt");
-  criarindicep(lista1,filename);
-  sprintf(filename,"indicelista2.txt");
-  criarindicep(lista2,filename);
+    opcao =  opcoes();
 
-  //teste para índice secundário
-  printf("///////TESTE/////\n");
-  criarinds();
+    void OpcaoEscolhida(opcao,l1, l2, lista1,lista2);
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,43 +1,37 @@
-typedef struct Pilha
-{
-    int tamanho;
-    int arq;
-    int numPilha[25];
-} Pilha;
 
-typedef struct Elemento
-{
-  char chave_primaria[30];
-    int OP;
-    char curso[3];
-    char nome[43];
+  typedef struct t_elemento
+  {
     int matricula;
+    char nome[41];
+    char chavePrimaria[31];
+    int op;
+    char curso[3];
     char turma;
-    int numArq;
-    int posicao;
-    struct Elemento * prox;
-    struct Elemento * ant;
-  } Elemento;
+    int pos;
+    struct t_elemento * prox;
+  } Lista;
 
   typedef struct Aponta
   {
-      Elemento * inicio;
-      Elemento * fim;
+      Lista * inicio;
+      Lista * fim;
       int tamanho;
   }Aponta;
+
+
 //FUNCOES DO PROGRAMA//
-int opcoes()
-void InserirPilha(Pilha *, int , int)
-int RemoverPilha(Pilha *);
-void OpcaoEscolhida(int , Aponta * , Aponta * );
-Elemento * AlocaElemento(int , char * , int , char * ,int , char );
-void InserirOrdenado(Aponta *lista, int matricula, char *nome, char *curso, char turma, int OP, int numArq, int posicao, char * chave_primaria);
+int opcoes(void);
+//void InserirPilha(Pilha *, int , int)
+//int RemoverPilha(Pilha *);
+void OpcaoEscolhida(int opcao, Aponta * , Aponta * ,FILE * , FILE *);
+Lista * AlocaLista(int , char * , int , char * ,int , char );
+void InserirOrdenado(Aponta *, int, char *, char *, char , int OP, int numArq, int posicao, char * chave_primaria);
 void MostraLista(Aponta *,int );
-int vazia(Aponta * lista)
-void liberarElemento(Elemento **p)
+int vazia(Aponta *);
+void liberarLista(Lista **p);
 Aponta * AlocCriaAPonta();
-Pilha * criarPilha();
-char * criarindicep(FILE*,char*);
+//Pilha * criarPilha();
+void criarindicep(FILE*,char*);
 int countregisters(FILE*);
 void criarinds(void);
 void criarindicesec(void);
