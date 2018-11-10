@@ -30,8 +30,7 @@ int main()
 
 
 
-  fclose(lista1);
-  fclose(lista2);
+
   return 0;
 
 }
